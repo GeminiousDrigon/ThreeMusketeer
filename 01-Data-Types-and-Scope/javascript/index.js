@@ -2,9 +2,8 @@
 // function changeTitle(e) {
 // 	console.log(e);
 // }
-
-// var button = document.getElementById("change-title");
-
+//DOM - Document Object Model
+// var button = document.getElementById("title").innerHTML= "Hello there";
 // console.log(button);
 //==================Event==================\\
 
@@ -59,6 +58,20 @@
 
 // calculate(1, 2);
 
+// function add(secondNumber, firstNumber) {
+//   //           2	            3
+//   var sum = firstNumber + secondNumber;
+//   console.log(sum);
+// }
+
+// function doSomeOperation(operation, name){
+// 	//lots of code
+// 	console.log("We are doing: "+name)
+// 	operation(1,2)
+// }
+
+// doSomeOperation(add, "Addition");
+
 // function customTimeout(callback, time) {
 // 	//do any logic
 // 	// sleep(time)
@@ -70,22 +83,36 @@
 // },1000);
 
 // setTimeout(function () {
-// 	console.log("hello");
-// }, 0);
+// 	console.log("hello-timeout");
+// },0);
 
 // let interval = setInterval(() => {
 // 	console.log("hello")
 // }, 1*1000);
 
 // setTimeout(() => {
-// 	clearInterval(interval)
-// }, 10*1000);
+//   console.log("hello after 1 second");
+// }, 1000);
+
+// setTimeout(() => {
+// 	console.log("hello")
+// }, 0);
 
 // console.log("hi!");
 
-// setTimeout(() => {
-// 	console.log("set timeout 1s!");
-// }, 1000);
+var createdPromise = new Promise(function (resolve, reject) {
+	setTimeout(() => {
+		resolve(1)
+	}, 5000);
+})
+
+console.log(createdPromise);
+
+setTimeout(() => {
+createdPromise.then(function (value) {
+	console.log(value)
+});
+}, 5500);
 
 // setTimeout(() => {
 // 	console.log("set timeout!");
@@ -128,11 +155,12 @@
 // Promise
 // React
 
-let person = {
-	firstname: "John",
-}
+// let person = {
+// 	firstname: "John",
+// }
 
-console.log(person.address?.street)
-if(person?.address?.street){
+// console.log(person.address?.street)
+// if(person?.address?.street){
 
-}
+// }
+
